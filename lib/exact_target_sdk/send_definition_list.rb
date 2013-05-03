@@ -9,6 +9,7 @@ class SendDefinitionList < AudienceItem
   property 'SendDefinitionListType'
   property 'CustomObjectID'
   property 'DataSourceTypeID'
+  property 'Client'
 
 end
 

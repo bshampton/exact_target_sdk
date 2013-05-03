@@ -7,6 +7,7 @@ class DataExtensionField < APIObject
   property 'IsPrimaryKey'
   property 'MaxLength'
   property 'Name'
+  property 'Client'
 
 end
 end
