@@ -21,6 +21,7 @@ class Subscriber < APIObject
   property 'EmailTypePreference'
   property 'CreatedDate'
   property 'UnsubscribedDate'
+  property 'Client'
   array_property 'Attributes'
   array_property 'Lists'
 
