@@ -40,5 +40,6 @@ module ExactTargetSDK
   autoload :DataFolder, 'exact_target_sdk/data_folder'
   autoload :ClientID, 'exact_target_sdk/client_i_d'
   autoload :ImportDefinition, 'exact_target_sdk/import_definition'
+  autoload :FileTransferLocation, 'exact_target_sdk/file_transfer_location'
 
 end
