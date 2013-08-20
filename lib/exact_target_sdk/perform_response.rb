@@ -1,7 +1,7 @@
 module ExactTargetSDK
 class PerformResponse
 
-  attr_reader :OverallStatus, :OverallStatusMessage, :RequestID
+  attr_reader :OverallStatus, :OverallStatusMessage, :RequestID, :Results
 
   def initialize(response)
     response = response.to_hash[:perform_response_msg]
