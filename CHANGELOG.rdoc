@@ -1,5 +1,11 @@
 = ExactTarget SDK
 
+== Version 0.10.5 (by Corey Pierson)
+* add response to PerformRequest
+
+== Version 0.10.4 (by Corey Pierson, Wil Chung)
+# Implented BusinessUnit rules and many other things
+
 == Version 0.10.3 (by Corey Pierson)
 * Implemented more functionality for DataExtensions, isPasteHTML option on emails
 
