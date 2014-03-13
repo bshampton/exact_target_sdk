@@ -28,6 +28,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'activesupport'
   s.add_dependency 'guid'
   s.add_dependency 'savon'
-  s.add_dependency 'wsse'
 
 end

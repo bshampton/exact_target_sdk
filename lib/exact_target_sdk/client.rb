@@ -324,12 +324,12 @@ module ExactTargetSDK
               xml.a :Address, "http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous"
             end
             xml.a :To, _sdk_config[:endpoint], "s:mustUnderstand" => "1"
-            #xml.o :Security, "s:mustUnderstand" => "1" do
-            #  xml.o :UsernameToken, "o:Id" => "test" do
-            #    xml.o :Username, _sdk_config[:username]
-            #    xml.o :Password, _sdk_config[:password]
-            #  end
-            #end
+            xml.o :Security, "s:mustUnderstand" => "1" do
+              xml.o :UsernameToken, "o:Id" => "test" do
+                xml.o :Username, _sdk_config[:username]
+                xml.o :Password, _sdk_config[:password]
+              end
+            end
           end
 
           xml.s :Body do
@@ -337,7 +337,10 @@ module ExactTargetSDK
           end
         end
 
-        response = client.call(method, xml: xml.target!)
+        response = client.call(method) do
+          xml  xml.target!
+          wsse_auth [_sdk_config[:username], _sdk_config[:password], :digest]
+        end
 
         # logger.info soap.instance_variable_get(:@xml) if _sdk_config[:log_soap_body] # TODO: WTF does this do?
 
