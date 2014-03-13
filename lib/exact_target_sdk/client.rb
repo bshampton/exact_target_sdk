@@ -1,7 +1,6 @@
 require 'guid'
 require 'savon'
 require 'timeout'
-require 'wsse'
 
 module ExactTargetSDK
 
