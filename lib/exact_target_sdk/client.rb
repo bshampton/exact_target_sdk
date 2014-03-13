@@ -1,6 +1,7 @@
 require 'guid'
 require 'savon'
 require 'timeout'
+require 'wsse'
 
 module ExactTargetSDK
 
@@ -291,7 +292,7 @@ module ExactTargetSDK
                                  raise_errors: false,
                                  log: true,
                                  pretty_print_xml: true,
-                                 wsse_auth: [_sdk_config[:username], _sdk_config[:password]])
+                                 wsse_auth: [_sdk_config[:username], _sdk_config[:password], :digest])
     end
 
     # Builds the SOAP request for the given method, delegating body
