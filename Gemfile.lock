@@ -19,6 +19,7 @@ GEM
     guid (0.1.1)
     gyoku (1.1.1)
       builder (>= 2.1.2)
+    httpclient (2.3.4.1)
     httpi (2.1.0)
       rack
       rubyntlm (~> 0.3.2)
@@ -67,6 +68,7 @@ DEPENDENCIES
   activemodel
   activesupport
   guid
+  httpclient
   rspec (~> 2.8)
   savon (~> 2.3.0)
   simple_gem

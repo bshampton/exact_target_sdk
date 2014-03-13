@@ -1,6 +1,7 @@
 require 'guid'
 require 'savon'
 require 'timeout'
+require 'httpclient'
 
 module ExactTargetSDK
 
@@ -336,10 +337,7 @@ module ExactTargetSDK
           end
         end
 
-        response = client.call(method) do
-          xml  xml.target!
-          wsse_auth [_sdk_config[:username], _sdk_config[:password], :digest]
-        end
+        response = client.call(method, xml: xml.target!)
 
         # logger.info soap.instance_variable_get(:@xml) if _sdk_config[:log_soap_body] # TODO: WTF does this do?
 

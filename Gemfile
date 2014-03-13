@@ -4,7 +4,7 @@ gem 'activemodel'
 gem 'activesupport'
 gem 'guid'
 gem 'savon', '~>2.3.0'
-gem 'wsse'
+gem 'httpclient'
 
 group :rake do
   gem 'simple_gem', :require => 'tasks/simple_gem'

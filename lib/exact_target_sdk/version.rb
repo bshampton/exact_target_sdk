@@ -1,3 +1,3 @@
 module ExactTargetSDK
-  VERSION = '0.10.6.6'
+  VERSION = '0.10.6.7'
 end
