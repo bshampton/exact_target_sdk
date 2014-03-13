@@ -288,7 +288,9 @@ module ExactTargetSDK
                                  namespace: _sdk_config[:namespace],
                                  open_timeout: _sdk_config[:open_timeout],
                                  read_timeout: _sdk_config[:read_timeout],
-                                 raise_errors: false)
+                                 raise_errors: false,
+                                 log: true,
+                                 pretty_print_xml: true)
     end
 
     # Builds the SOAP request for the given method, delegating body
