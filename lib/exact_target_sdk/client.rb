@@ -292,7 +292,9 @@ module ExactTargetSDK
                                  raise_errors: false,
                                  log: true,
                                  pretty_print_xml: true,
-                                 wsse_auth: [_sdk_config[:username], _sdk_config[:password], :digest])
+                                 wsse_auth: [_sdk_config[:username], _sdk_config[:password], :digest],
+                                 wsse_timestamp: true
+                                )
     end
 
     # Builds the SOAP request for the given method, delegating body
