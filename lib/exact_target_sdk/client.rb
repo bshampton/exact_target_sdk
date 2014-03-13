@@ -290,7 +290,8 @@ module ExactTargetSDK
                                  read_timeout: _sdk_config[:read_timeout],
                                  raise_errors: false,
                                  log: true,
-                                 pretty_print_xml: true)
+                                 pretty_print_xml: true,
+                                 wsse_auth: [_sdk_config[:username], _sdk_config[:password]])
     end
 
     # Builds the SOAP request for the given method, delegating body
