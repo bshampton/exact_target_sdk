@@ -323,12 +323,12 @@ module ExactTargetSDK
               xml.a :Address, "http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous"
             end
             xml.a :To, _sdk_config[:endpoint], "s:mustUnderstand" => "1"
-            xml.o :Security, "s:mustUnderstand" => "1" do
-              xml.o :UsernameToken, "o:Id" => "test" do
-                xml.o :Username, _sdk_config[:username]
-                xml.o :Password, _sdk_config[:password]
-              end
-            end
+            #xml.o :Security, "s:mustUnderstand" => "1" do
+            #  xml.o :UsernameToken, "o:Id" => "test" do
+            #    xml.o :Username, _sdk_config[:username]
+            #    xml.o :Password, _sdk_config[:password]
+            #  end
+            #end
           end
 
           xml.s :Body do
